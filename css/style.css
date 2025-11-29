@@ -82,7 +82,7 @@ h1 {
 }
 
 #deleteAll {
-  background: #d12d2d;
+  background: #f10c0c;
   color: #fff;
   padding: 8px 15px;
   border-radius: 8px;
@@ -124,10 +124,10 @@ th, td {
   margin: 0 3px;
 }
 
-.done-btn { background: #12ff05; color: #fff; }
-.done-btn:hover { background: #0abc21; }
-.delete-btn { background: #ff310c; color: #fff; }
-.delete-btn:hover { background: #a80b05b9; }
+.done-btn { background: #1deb3c; color: #fff; }
+.done-btn:hover { background: #036d11; }
+.delete-btn { background: #f10c0c; color: #fff; }
+.delete-btn:hover { background: #5f0606; }
 
 footer {
   margin-top: 15px;

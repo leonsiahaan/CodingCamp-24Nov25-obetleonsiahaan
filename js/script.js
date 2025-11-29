@@ -41,13 +41,13 @@ function renderTasks(filter = "all", searchText = "") {
     row.innerHTML = `
       <td>${task.name}</td>
       <td>${task.date}</td>
-      <td>${task.done ? "Done" : "Pending"}</td>
+      <td>${task.done ? "Selesai" : "Pending"}</td>
       <td>
         ${task.done 
           ? `<span style="color:green;font-weight:bold;">✔ Completed</span>` 
           : `
             <button class="action-btn done-btn" onclick="toggleDone(${index})">✔</button>
-            <button class="action-btn delete-btn" onclick="deleteTask(${index})">✘</button>
+            <button class="action-btn delete-btn" onclick="deleteTask(${index})">✖</button>
           `
         }
       </td>
