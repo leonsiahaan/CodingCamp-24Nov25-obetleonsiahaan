@@ -1,11 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testing upload</title>
+    <title>Todo List - Yama Roni</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
-    
+    <!-- Header Section -->
+    <header>
+        <h1 class="text-2xl font-bold">My Todo List</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Form Section -->
+        <section class="py-4">
+            <form>
+                <!-- Todo Input -->
+                <input type="text" class="border p-2 rounded" id="todo-input" placeholder="Enter a new todo item">
+
+                <!-- Date Input -->
+                <input type="date" class="border p-2 rounded" id="todo-date" placeholder="Enter due date">
+            </form>
+
+            <!-- Add Button -->
+            <button class="border rounded p-2 bg-green-500 text-white" onclick="validateForm();" type="button">Add
+                Todo</button>
+        </section>
+
+        <!-- Action Section -->
+        <section class="flex py-2 justify-between">
+            <!-- Clear All Button -->
+            <button class="border rounded p-2 bg-red-500 text-white" onclick="clearTodos();">Clear All Todos</button>
+
+            <!-- Filter Options -->
+            <button class="border rounded p-2 bg-blue-500 text-white">Filter Todos</button>
+        </section>
+
+        <!-- Todo List Section -->
+        <section class="py-2">
+            <header>
+                <h1 class="text-2xl font-semibold">List of Todos</h1>
+            </header>
+
+            <ul class="pt-2" id="todo-list">
+                <!-- Todo items will be dynamically added here -->
+                <li>No todos available</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Yama Roni. All rights reserved.</p>
+    </footer>
+
+    <!-- Javascript External -->
+    <script src="js/script.js"></script>
 </body>
+
 </html>
