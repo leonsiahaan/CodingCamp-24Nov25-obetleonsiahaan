@@ -1,5 +1,136 @@
 body {
-    min-height: 100vh;
-    align-content: center;
-    justify-items: center;
+  font-family: "Calibri", sans-serif;
+  background: linear-gradient(135deg, #ff3a3a, #0f317b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: #e0e18e;
+  border-radius: 15px;
+  padding: 25px;
+  width: 750px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.form-group input, .form-group button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+#addBtn {
+  background: hsl(212, 100%, 49%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#addBtn:hover {
+  background: #003398;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin: 5px 0;
+  height: 16px;
+}
+
+.control-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.filter-group, .search-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#filterSelect {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #d9f8f3;
+}
+
+#searchInput {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 200px;
+}
+
+#deleteAll {
+  background: #d12d2d;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#deleteAll:hover {
+  background: #5f0606;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+thead {
+  background: #e6f7f4;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.empty {
+  text-align: center;
+  color: #aaa;
+}
+
+.action-btn {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 3px;
+}
+
+.done-btn { background: #12ff05; color: #fff; }
+.done-btn:hover { background: #0abc21; }
+.delete-btn { background: #ff310c; color: #fff; }
+.delete-btn:hover { background: #a80b05b9; }
+
+footer {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #000000;
 }

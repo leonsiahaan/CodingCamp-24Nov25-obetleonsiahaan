@@ -1,70 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List - Yama Roni</title>
-
-    <!-- Link CSS -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List - Obet Leon Siahaan</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1 class="text-2xl font-bold">My Todo List</h1>
-    </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Form Section -->
-        <section class="py-4">
-            <form>
-                <!-- Todo Input -->
-                <input type="text" class="border p-2 rounded" id="todo-input" placeholder="Enter a new todo item">
+  <div class="container">
+    <h1>To-Do List</h1>
+    
+    <div class="form-group">
+      <input type="text" id="taskInput" placeholder="Add to do...">
+      <input type="date" id="dateInput">
+      <button id="addBtn">Add</button>
+    </div>
 
-                <!-- Date Input -->
-                <input type="date" class="border p-2 rounded" id="todo-date" placeholder="Enter due date">
-            </form>
+    <p id="errorMsg" class="error"></p>
 
-            <!-- Add Button -->
-            <button class="border rounded p-2 bg-green-500 text-white" onclick="validateForm();" type="button">Add
-                Todo</button>
-        </section>
+    <div class="control-panel">
+      <div class="filter-group">
+        <label for="filterSelect"><strong>Filter:</strong></label>
+        <select id="filterSelect">
+          <option value="all">Semua</option>
+          <option value="done">Selesai</option>
+          <option value="pending">Pending</option>
+        </select>
+      </div>
 
-        <!-- Action Section -->
-        <section class="flex py-2 justify-between">
-            <!-- Clear All Button -->
-            <button class="border rounded p-2 bg-red-500 text-white" onclick="clearTodos();">Clear All Todos</button>
+      <div class="search-group">
+        <input type="text" id="searchInput" placeholder="Search task...">
+      </div>
+      <button id="deleteAll">Delete All</button>
+    </div>
 
-            <!-- Filter Options -->
-            <button class="border rounded p-2 bg-blue-500 text-white">Filter Todos</button>
-        </section>
+    <table>
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
 
-        <!-- Todo List Section -->
-        <section class="py-2">
-            <header>
-                <h1 class="text-2xl font-semibold">List of Todos</h1>
-            </header>
-
-            <ul class="pt-2" id="todo-list">
-                <!-- Todo items will be dynamically added here -->
-                <li>No todos available</li>
-            </ul>
-        </section>
-    </main>
-
-    <!-- Footer Section -->
+      <tbody id="taskList">
+        <tr><td colspan="4" class="empty">No tasks yet</td></tr>
+      </tbody>
+    </table>
+      
     <footer>
-        <p>&copy; 2024 Yama Roni. All rights reserved.</p>
+        <h3><b><p>&copy; 2025 Obet Leon Siahaan</p></b></h3>
     </footer>
+  </div>
 
-    <!-- Javascript External -->
-    <script src="js/script.js"></script>
+
+  <script src="js/script.js"></script>
 </body>
-
 </html>
